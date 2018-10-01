@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "986213707526",
+    "firebase_url": "https://voices-ad267.firebaseio.com",
+    "project_id": "voices-ad267",
+    "storage_bucket": "voices-ad267.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986213707526:android:d53b0bd341f77bc3",
+        "android_client_info": {
+          "package_name": "com.example.voices"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986213707526-23ah2drdv4558v6i10dbi9748dqvimka.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "986213707526-23ah2drdv4558v6i10dbi9748dqvimka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYeCC_qJuaekN1ot3GN1VCbC1vSdx5eQ8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

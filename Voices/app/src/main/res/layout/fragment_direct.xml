@@ -1,0 +1,42 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.voices.view.direct.DirectFragment"
+    android:background="#FAFAFA">
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="2dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/button_new_message"
+        android:elevation="4dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:text="DIRECT"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="30sp"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view_conversations"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

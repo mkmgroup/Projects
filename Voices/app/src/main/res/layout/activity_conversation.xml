@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.voices.view.direct.ConversationActivity">
+    <com.stfalcon.chatkit.messages.MessagesList
+        android:id="@+id/messagesList"
+        android:layout_width="match_parent"
+        app:outcomingDefaultBubbleColor="#AB3A7A"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linear_input_new_message" />
+    <Chronometer
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_input_new_message"
+        android:gravity="right"
+        android:textSize="20sp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/chronometer_conversation"
+        android:visibility="invisible"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/linear_input_new_message"
+        >
+        <com.stfalcon.chatkit.messages.MessageInput
+            android:id="@+id/inputNewMessageConvActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:inputHint="Envia un mensaje"
+            android:layout_weight="16"
+            />
+        <ImageButton
+            android:layout_weight="1"
+            android:id="@+id/conversation_record_audio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/button_light"
+            app:srcCompat="@drawable/ic_microphone3"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

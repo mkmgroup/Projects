@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "Scarlett",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

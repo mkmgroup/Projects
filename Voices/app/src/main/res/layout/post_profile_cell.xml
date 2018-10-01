@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButtonPostProfileCell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#AB3A7A"
+        android:backgroundTint="#AB3A7A"
+        android:clickable="true"
+        android:scaleType="center"
+        app:borderWidth="0dp"
+        app:elevation="8dp"
+        app:fabCustomSize="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#AB3A7A"
+        app:srcCompat="@drawable/ic_play_arrow_white_24dp" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/playPostAviProfile"
+        android:layout_width="30dp"
+        android:elevation="10dp"
+        android:visibility="invisible"
+        android:layout_height="30dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        app:indicatorColor="#ffffff"
+        app:indicatorName="LineScalePartyIndicator"
+        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButtonPostProfileCell"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButtonPostProfileCell"
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButtonPostProfileCell"
+        app:layout_constraintTop_toTopOf="@+id/floatingActionButtonPostProfileCell" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toEndOf="@id/floatingActionButtonPostProfileCell"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginStart="40dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/profile_post_cell_hashtag_text_view"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_post_cell_date_text_view"
+            android:text=""/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingEnd="20dp">
+        <TextView
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/profile_post_cell_duration_text_view"
+            android:textAlignment="center"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_microphone2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_post_cell_likes_text_view"
+                android:text=""/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

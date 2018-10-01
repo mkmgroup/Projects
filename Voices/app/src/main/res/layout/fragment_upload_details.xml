@@ -1,0 +1,204 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.voices.view.upload.UploadDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.github.abdularis.piv.VerticalScrollParallaxImageView
+                android:layout_width="match_parent"
+                android:id="@+id/djImge"
+                android:layout_height="400dp"
+                android:src="@drawable/ic_dj"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hashtags:"
+                android:id="@+id/textViewHash"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/djImge"/>
+            <com.pchmn.materialchips.ChipView
+                android:id="@+id/addHashChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/textViewHash"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="22dp"
+                app:layout_constraintTop_toBottomOf="@id/djImge"
+                app:label="+ AGREGAR">
+            </com.pchmn.materialchips.ChipView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollHash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewHash"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/linear_tags_hash"
+                    android:paddingTop="10dp">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Etiquetas:"
+                android:id="@+id/textViewTags"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrollHash"/>
+            <com.pchmn.materialchips.ChipView
+                android:id="@+id/addTagChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/textViewTags"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/scrollHash"
+                app:label="+ AGREGAR">
+            </com.pchmn.materialchips.ChipView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollUsers"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewTags"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/linear_tags_users"
+                    android:paddingTop="10dp">
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ubicacion:"
+                android:id="@+id/textViewLocation"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrollUsers"/>
+
+            <com.pchmn.materialchips.ChipView
+                android:id="@+id/addLocationChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/textViewLocation"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/scrollUsers"
+                app:label="+ AGREGAR">
+            </com.pchmn.materialchips.ChipView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewLocation"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/linear_tags_location"
+                android:paddingTop="10dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/switchesUploadDetails"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@id/linear_tags_location"
+                >
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Facebook"
+                    android:layout_weight="1"
+                    android:id="@+id/switch_facebook2"
+                    android:textColor="@color/common_google_signin_btn_text_light"
+                    android:textSize="20sp"
+                    android:theme="@style/SCBSwitch"
+                    android:paddingRight="30dp"
+                    />
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Instagram"
+                    android:paddingLeft="30dp"
+                    android:textColor="@color/common_google_signin_btn_text_light"
+                    android:id="@+id/switch_instagram2"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:theme="@style/SCBSwitch"
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+            <Button
+                android:id="@+id/upload_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/button_light"
+                android:hint="SUBIR"
+                android:textSize="20sp"
+                android:shadowColor="#AB3A7A"
+                android:textColorHint="#ffffff"
+                app:layout_constraintTop_toBottomOf="@+id/switchesUploadDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
